@@ -93,13 +93,14 @@
   transform: scale(1.1);
 }
 }
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 600px) and (max-width: 859px) {
   .card-container {
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .custom-card {
-    flex: 1 1 30%;
+    flex: 1 1 45%;
     max-width: none;
   }
 }

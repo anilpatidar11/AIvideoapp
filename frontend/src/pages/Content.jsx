@@ -13,6 +13,12 @@ const Content = () => {
 
 console.log(data)
 
+  useEffect(() => {
+  console.log("Screen width:", window.innerWidth);
+}, []);
+
+  
+  
   return (
     <div className='card-container'>
       
