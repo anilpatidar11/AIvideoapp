@@ -21,7 +21,8 @@ import fantasy from "../assets/style/fantasy.mp4"
 import lineart from "../assets/style/line_art.mp4"
 import stopmotion from "../assets/style/stopmotion.mp4"
 import vector from "../assets/style/vector_art.mp4"
-import 'bootstrap-icons/font/bootstrap-icons.css';
+import { FiChevronUp, FiChevronDown } from "react-icons/fi";
+
 
 
 const Generate = () => {
@@ -39,15 +40,17 @@ const [styleOpen, setStyleOpen] = useState(false);
     <div className='generate-left' style={{ maxHeight: "700px", overflowY: "auto" }}>
 
   <div className="card shadow-sm w-100 mb-5" style={{ maxWidth: '350px' }}>
-    <div
-      className="card-header bg-light fw-bold d-flex justify-content-between align-items-center"
-      onClick={() => setOpen(!open)}
-      style={{ cursor: 'pointer' }}
-    >
-      General Settings
-<i className={`bi ${open ? 'bi-arrow-up-short' : 'bi-arrow-down-short'}`}></i>
+ <div
+  className="card-header bg-light fw-bold d-flex justify-content-between align-items-center"
+  onClick={() => setOpen(!open)}
+  style={{ cursor: 'pointer' }}
+>
+  General Settings
+  {open ? <FiChevronUp size={20} /> : <FiChevronDown size={20} />}
+</div>
 
-    </div>
+        
+
 
     {open && (
       <div className="card-body">
@@ -89,7 +92,7 @@ const [styleOpen, setStyleOpen] = useState(false);
       style={{ cursor: 'pointer' }}
     >
       Camera
-<i className={`bi ${cameraOpen ? 'bi-arrow-up-short' : 'bi-arrow-down-short'}`}></i>
+  {open ? <FiChevronUp size={20} /> : <FiChevronDown size={20} />}
 
     </div>
 
@@ -160,7 +163,7 @@ const [styleOpen, setStyleOpen] = useState(false);
       style={{ cursor: 'pointer' }}
     >
       Style
-<i className={`bi ${styleOpen ? 'bi-arrow-up-short' : 'bi-arrow-down-short'}`}></i>
+  {open ? <FiChevronUp size={20} /> : <FiChevronDown size={20} />}
 
     </div>
 
