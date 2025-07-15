@@ -97,12 +97,5 @@
 @media screen and (min-width: 1500px) {
   .card-container {
     flex-wrap: nowrap;
-    justify-content: space-between; /* or center, as needed */
-    padding: 40px 60px;
-  }
-
-  .custom-card {
-    flex: 1 1 calc(33.33% - 24px); /* Show 3 cards in one row */
-    max-width: unset;
   }
 }
