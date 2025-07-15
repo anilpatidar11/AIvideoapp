@@ -1,81 +1,88 @@
-
-
-    .full-width-section {
+.full-width-section {
   width: 100%;
   padding: 40px 20px;
   background-color: #f9f9f9;
-
-
-    display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 .content-wrapper {
   display: flex;
   flex-wrap: wrap;
   width: 90%;
+  max-width: 1440px;
   gap: 20px;
-
-
 }
 
+/* Common to both sections */
 .text-box1,
 .video-box {
   flex: 1 1 48%;
-
   padding: 20px;
   border-radius: 12px;
+  box-sizing: border-box;
 }
 
-.text-box1{
-display: flex;
- justify-content: center;
- align-items: center;
+/* Center the text */
+.text-box1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.text-inner{
- display: flex;
-flex-direction: column;
-width: 100%;
-height: 60%;
-
- justify-content: center;
- align-items: center;
- 
-
-
-}
-
-.text-inner h2{  
-font-size:3rem;
-width: 80%;
-font-weight: 700;
-}
-
-.text-inner p{  
-font-size:1rem;
-width: 80%;
-
-}
-
-.video-box video {   
+.text-inner {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  height: 500px; 
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.text-inner h2 {
+  font-size: 3rem;
+  width: 85%;
+  font-weight: 700;
+  text-align: left;
+
+}
+
+.text-inner p {
+  font-size: 1rem;
+  width: 85%;
+  text-align: left;
+}
+
+/* Video responsiveness */
+.video-box video {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9; /* Ensures good responsive size */
   object-fit: cover;
   border-radius: 8px;
 }
 
-
-
+/* Tablet & Mobile styles */
 @media (max-width: 768px) {
   .content-wrapper {
     flex-direction: column;
   }
 
-  .text-box,
+  .text-box1,
   .video-box {
     flex: 1 1 100%;
+    padding: 16px;
+  }
+
+  .text-inner h2 {
+    font-size: 2rem;
+    width: 90%;
+  
+  }
+
+  .text-inner p {
+    width: 90%;
+    font-size: 0.95rem;
   }
 }
