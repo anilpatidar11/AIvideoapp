@@ -93,14 +93,13 @@
   transform: scale(1.1);
 }
 }
-
 @media screen and (min-width: 1500px) {
   .card-container {
     flex-wrap: nowrap;
   }
 
   .custom-card {
-    flex: 1 1 30%; /* Each card takes ~30% width */
-    max-width: none; /* Disable max-width limit */
+    flex: 1 1 30%;
+    max-width: none;
   }
 }
