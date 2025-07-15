@@ -21,7 +21,7 @@ import fantasy from "../assets/style/fantasy.mp4"
 import lineart from "../assets/style/line_art.mp4"
 import stopmotion from "../assets/style/stopmotion.mp4"
 import vector from "../assets/style/vector_art.mp4"
-
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 
 const Generate = () => {
