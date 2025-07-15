@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import content from './ContentData';
 import "../css/content.css";
 
@@ -6,7 +6,7 @@ const Content = () => {
 
   const [data, setData] = useState([]);
 
-  useState(() => {
+  useEffect(() => {
     
     setData(content)
   },[])
